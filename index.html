@@ -33,31 +33,18 @@
   </head>
 
   <body>
-    <!-- Branding Header -->
-    <section class="branding-header">
-      <div class="container text-center">
-        <div class="branding-logo">
-          <img src="./images/logo-small.png" alt="BDA Logo" />
-        </div>
-
-        <h1 class="branding-title">Building Design Authority (P) Ltd.</h1>
-
-        <span class="branding-subtitle">
-          Engineering, Architectural & Planning Consultant
-        </span>
-
-        <span class="branding-certification">
-          ISO 9001:2015 Quality Management System Certified
-        </span>
-      </div>
-    </section>
-
     <!-- HERO SECTION -->
     <section class="hero-section position-relative">
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-dark hero-navbar">
         <div class="container">
-          <a class="navbar-brand fw-bold" href="#">LOGO</a>
+          <a class="navbar-logo fw-bold" href="#">
+            <img
+              src="images/logo-small.png"
+              class="navbar-logo-img"
+              alt="Logo"
+            />
+          </a>
 
           <button
             class="navbar-toggler"
@@ -73,14 +60,64 @@
             id="heroNavbar"
           >
             <ul class="navbar-nav gap-3">
-              <li class="nav-item"><a class="nav-link" href="#">People</a></li>
               <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+
+              <!-- MEGA MENU -->
+              <li class="nav-item mega-item">
+                <a class="nav-link" href="#">About Us</a>
+
+                <div class="mega-menu">
+                  <div class="container">
+                    <div class="row g-4">
+                      <div class="col-lg-4">
+                        <h5>Dream, Design, Deliver</h5>
+                        <span>
+                          We know how we deliver is just as important as what we
+                          deliver.
+                        </span>
+                        <a href="#" class="mega-link">How We Deliver →</a>
+                      </div>
+
+                      <div class="col-lg-8">
+                        <div class="row g-4">
+                          <div class="col-md-4">
+                            <img src="images/img1.jpg" class="mega-img" />
+                            <h6>Engineering</h6>
+                            <span>Innovative, data-driven solutions.</span>
+                          </div>
+
+                          <div class="col-md-4">
+                            <img src="images/img2.jpg" class="mega-img" />
+                            <h6>Construction</h6>
+                            <span>Executing complex projects globally.</span>
+                          </div>
+
+                          <div class="col-md-4">
+                            <img src="images/img3.jpg" class="mega-img" />
+                            <h6>Project Management</h6>
+                            <span>Delivering safely and efficiently.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item mega-item">
                 <a class="nav-link" href="#">Projects</a>
+                <!-- you can reuse mega-menu here -->
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="#">Approach</a>
+                <a class="nav-link" href="#">News & Events</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
