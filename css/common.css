@@ -3,6 +3,25 @@
   width: auto;
   object-fit: contain;
 }
+/*=== Branding Header Styles ===*/
+.branding-header {
+  background-color: #b00000; /* red */
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.branding-header,
+.branding-header h1,
+.branding-header span {
+  color: #ffffff;
+}
+
+/* Logo spacing */
+.branding-logo img {
+  height: 70px;
+  width: auto;
+  margin-bottom: 15px;
+}
 
 .branding-logo {
   display: flex;
@@ -20,42 +39,186 @@
   filter: brightness(0) saturate(100%) invert(63%) sepia(45%) saturate(500%)
     hue-rotate(170deg);
 }
+@media (max-width: 768px) {
+  .branding-header {
+    display: none;
+  }
+}
+
+/*=== Hero Section Carousel Styles ===*/
 
 .hero-section {
-  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-/* Image sizing */
+/* NAVBAR OVER HERO */
+.hero-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  padding: 20px 0;
+}
+
+.hero-navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.hero-navbar .nav-link:hover {
+  color: #ff3b3b;
+}
+
+/* CAROUSEL */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100vh;
+}
+
 .carousel-img {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   object-fit: cover;
 }
 
-/* Caption styling */
-.carousel-caption {
+/* DARK OVERLAY */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  padding: 20px;
-  border-radius: 8px;
+  z-index: 1;
 }
 
-/* Mobile responsive */
+.carousel-caption {
+  z-index: 2;
+  bottom: 10%;
+}
+
+.carousel-caption h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.carousel-caption span {
+  display: block;
+  font-size: 1.1rem;
+}
+
+/*=== Welcome Section Styles ===*/
+.welcome-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #4b6f1d;
+  margin-bottom: 20px;
+}
+
+.welcome-intro {
+  display: block;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.welcome-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 30px 0;
+}
+
+.welcome-highlight {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f5e00;
+  line-height: 1.7;
+}
+
+.welcome-btn-wrapper {
+  margin-top: 30px;
+}
+
+.welcome-btn {
+  display: inline-block;
+  background-color: #c40000;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.welcome-btn:hover {
+  background-color: #a80000;
+  color: #ffffff;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .carousel-img {
-    height: 60vh;
+  .welcome-section {
+    padding: 50px 15px;
   }
 
-  .carousel-caption {
-    bottom: 15%;
-    padding: 12px;
+  .welcome-title {
+    font-size: 26px;
   }
 
-  .carousel-caption h5 {
-    font-size: 18px;
+  .welcome-intro,
+  .welcome-highlight {
+    font-size: 15px;
   }
 
-  .carousel-caption span {
-    font-size: 14px;
+  .welcome-badge {
+    max-width: 160px;
   }
+}
+/*=== Project Slider Section Styles ===*/
+.project-slider-section {
+  padding: 70px 0;
+  background-color: #f8f8f8;
+}
+
+.slider-title {
+  font-size: 32px;
+  color: #2f5e00;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-type {
+  display: block;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
 }
