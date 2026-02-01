@@ -71,14 +71,12 @@
   width: auto;
   object-fit: contain;
 }
-/* Default (white logo on hero) */
-/* DEFAULT: GREEN LOGO */
+
 .hero-navbar .navbar-logo-img {
   filter: brightness(0) saturate(100%) invert(42%) sepia(86%) saturate(748%)
     hue-rotate(85deg) brightness(95%) contrast(105%);
 }
 
-/* Red logo when navbar background turns white */
 .hero-navbar:has(.nav-item:hover) .navbar-logo-img {
   filter: brightness(0) saturate(100%) invert(14%) sepia(96%) saturate(7490%)
     hue-rotate(1deg) brightness(95%) contrast(105%);
@@ -118,7 +116,6 @@
 
 /* DESKTOP HOVER BEHAVIOR */
 @media (min-width: 992px) {
-  /* SHOW MEGA MENU */
   .mega-item:hover .mega-menu {
     opacity: 1;
     visibility: visible;
@@ -203,6 +200,49 @@
 /* NAVBAR LINK ACTIVE STYLE */
 .hero-navbar .nav-link:hover {
   color: #e10600;
+}
+/* MEGA LIST */
+.mega-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-list li {
+  margin-bottom: 12px;
+}
+
+.mega-list a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.mega-list a::before {
+  content: "→";
+  margin-right: 8px;
+  color: #e10600;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.25s ease;
+}
+
+.mega-list a:hover {
+  color: #e10600;
+  padding-left: 6px;
+}
+
+.mega-list a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* TWO COLUMN LIST */
+.mega-list.two-column {
+  columns: 2;
+  column-gap: 40px;
 }
 
 /* CAROUSEL */
