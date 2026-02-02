@@ -403,6 +403,25 @@ body.menu-open {
   .welcome-badge {
     max-width: 160px;
   }
+  .hero-section {
+    height: 80vh;
+    overflow: hidden;
+  }
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 80vh;
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 }
 /*=== Project Slider Section Styles ===*/
 .project-slider-section {
@@ -524,107 +543,104 @@ body.menu-open {
 }
 
 /*=== Company from begnning to the end===*/
-.company-timeline-section {
-  padding: 90px 0;
-  background: #f8f8f8;
+.timeline-section {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.timeline-scroll {
+  display: flex;
+  gap: 60px;
+  overflow-x: auto;
+  padding: 0 0 30px;
+  scroll-behavior: smooth;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: #1aa3a3;
+  border-radius: 10px;
+}
+
+.timeline-item {
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-text {
+  margin-bottom: 20px;
 }
 
 .timeline-title {
-  font-size: 32px;
+  display: block;
+  font-size: 20px;
   font-weight: 600;
-  color: #2f5e00;
-  margin-bottom: 60px;
+  color: #ff7a18;
+  margin-bottom: 10px;
 }
 
-/* TIMELINE LINE */
-.timeline {
-  position: relative;
-  margin-left: 30px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 9px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: #ddd;
-}
-
-/* ITEM */
-.timeline-item {
-  position: relative;
-  display: flex;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-/* DOT */
-.timeline-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-}
-
-.timeline-dot.yellow {
-  background: #d1b800;
-}
-.timeline-dot.red {
-  background: #c41c1c;
-}
-.timeline-dot.blue {
-  background: #1f9bb4;
-}
-
-/* CONTENT CARD */
-.timeline-content {
-  background: #ffffff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  max-width: 620px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* YEAR */
-.timeline-year {
-  font-size: 22px;
-  font-weight: 600;
-  color: #111;
-}
-
-/* TEXT */
-.timeline-text {
-  font-size: 16px;
-  color: #555;
+.timeline-desc {
+  display: block;
+  font-size: 15px;
   line-height: 1.7;
+  color: #333;
 }
 
-/* MOBILE */
+.timeline-image {
+  position: relative;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.timeline-year {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  background: #1aa3a3;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* Disable text selection */
+.timeline-section,
+.timeline-section * {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Cursor hint */
+.timeline-scroll {
+  cursor: grab;
+}
+
+.timeline-scroll:active {
+  cursor: grabbing;
+}
 @media (max-width: 768px) {
-  .timeline {
-    margin-left: 0;
+  .timeline-image img {
+    width: 90%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
   }
-
-  .timeline::before {
-    left: 50%;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .timeline-content {
-    max-width: 100%;
+  .timeline-desc {
+    display: block;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    width: 80%;
   }
 }
+
 /*=== Footer Styles ===*/
 .site-footer {
   font-family: Arial, sans-serif;
@@ -634,7 +650,7 @@ body.menu-open {
 /* Top section */
 .footer-top {
   background: #ffffff;
-  padding: 40px 0;
+  padding: 40px 15px;
 }
 
 .footer-container {
@@ -740,5 +756,61 @@ body.menu-open {
 @media (max-width: 480px) {
   .footer-container {
     grid-template-columns: 1fr;
+  }
+}
+/* ===========================
+   MOBILE FOOTER LAYOUT
+   =========================== */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer-col a {
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+
+  /* Contact section spacing */
+  .footer-text {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  .footer-text .label {
+    font-weight: 600;
+    min-width: 70px;
+    display: inline-block;
+  }
+
+  /* Social icons row */
+  .social-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 6px;
+  }
+
+  .social-links a {
+    font-size: 18px;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding: 14px 10px;
+    line-height: 1.6;
   }
 }
