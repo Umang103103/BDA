@@ -1,45 +1,3 @@
-/*=== Branding Header Styles ===*/
-.branding-header {
-  background-color: #b00000; /* red */
-  padding: 40px 15px;
-  text-align: center;
-}
-
-.branding-header,
-.branding-header h1,
-.branding-header span {
-  color: #ffffff;
-}
-
-/* Logo spacing */
-.branding-logo img {
-  height: 70px;
-  width: auto;
-  margin-bottom: 15px;
-}
-
-.branding-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.branding-logo img {
-  height: 70px;
-  width: auto;
-  max-width: 100%;
-  display: block;
-
-  filter: brightness(0) saturate(100%) invert(63%) sepia(45%) saturate(500%)
-    hue-rotate(170deg);
-}
-@media (max-width: 768px) {
-  .branding-header {
-    display: none;
-  }
-}
-
 /*=== Hero Section Carousel Styles ===*/
 
 .hero-section {
@@ -56,18 +14,26 @@
   z-index: 10;
   background: transparent;
   padding: 20px 0;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
+/* NAV LINKS */
 .hero-navbar .nav-link {
   color: #fff;
   font-weight: 500;
   text-transform: uppercase;
+  transition: color 0.25s ease;
 }
+
 .hero-navbar .nav-link:hover {
-  color: #ff3b3b;
+  color: #e10600;
 }
+
+/* LOGO */
 .navbar-logo {
-  height: 45px; /* adjust as needed */
+  height: 45px;
   width: auto;
   object-fit: contain;
 }
@@ -80,19 +46,6 @@
 .hero-navbar:has(.nav-item:hover) .navbar-logo-img {
   filter: brightness(0) saturate(100%) invert(14%) sepia(96%) saturate(7490%)
     hue-rotate(1deg) brightness(95%) contrast(105%);
-}
-
-/* DEFAULT NAVBAR STATE */
-.hero-navbar {
-  background: transparent;
-  transition:
-    background 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.hero-navbar .nav-link {
-  color: #fff;
-  transition: color 0.25s ease;
 }
 
 /* MEGA MENU BASE */
@@ -111,7 +64,7 @@
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.25s ease;
-  z-index: 998;
+  z-index: 999;
 }
 
 /* DESKTOP HOVER BEHAVIOR */
@@ -136,34 +89,6 @@
   /* ACTIVE / HOVER COLOR */
   .hero-navbar:has(.nav-item:hover) .nav-link:hover {
     color: #e10600;
-  }
-}
-
-/* MEGA MENU BASE */
-.mega-item {
-  position: static;
-}
-
-.mega-menu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  background: #fff;
-  padding: 40px 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
-  z-index: 999;
-}
-
-/* SHOW ON HOVER (DESKTOP) */
-@media (min-width: 992px) {
-  .mega-item:hover .mega-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
   }
 }
 
@@ -197,10 +122,6 @@
   margin-bottom: 10px;
 }
 
-/* NAVBAR LINK ACTIVE STYLE */
-.hero-navbar .nav-link:hover {
-  color: #e10600;
-}
 /* MEGA LIST */
 .mega-list {
   list-style: none;
@@ -243,6 +164,134 @@
 .mega-list.two-column {
   columns: 2;
   column-gap: 40px;
+}
+/* CUSTOM HAMBURGER */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  z-index: 1001;
+  position: relative;
+}
+
+.toggler-icon {
+  width: 26px;
+  height: 2px;
+  background: #4fe91ce9;
+  position: relative;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.toggler-icon::before,
+.toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background: #4fe91ce9;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.toggler-icon::before {
+  top: -8px;
+}
+
+.toggler-icon::after {
+  top: 8px;
+}
+
+/* OPEN STATE → CROSS */
+.navbar-toggler:not(.collapsed) .toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+@media (max-width: 991px) {
+  #heroNavbar {
+    position: fixed;
+    inset: 0; /* top:0 right:0 bottom:0 left:0 */
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    padding: 90px 24px 24px;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .navbar-nav {
+    gap: 0;
+  }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid #eee;
+  }
+  /* NAVBAR PANEL */
+  #heroNavbar {
+    padding: 80px 20px 20px 20px;
+  }
+
+  .hero-navbar .nav-link {
+    color: #111;
+    padding: 14px 0;
+  }
+
+  /* DISABLE DESKTOP MEGA BEHAVIOR */
+  .mega-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* OPEN STATE (JS ADDS .open) */
+  .mega-menu.open {
+    max-height: 1200px;
+    padding: 20px 0;
+  }
+
+  /* SUBMENU TOGGLE BUTTON */
+  .submenu-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e10600;
+    cursor: pointer;
+  }
+
+  /* REMOVE HOVER EFFECTS ON MOBILE */
+  .hero-navbar:has(.nav-item:hover) {
+    background: transparent;
+    box-shadow: none;
+  }
+  .mega-list.two-column {
+    columns: 1;
+  }
+}
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* CAROUSEL */

@@ -38,6 +38,7 @@
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-dark hero-navbar">
         <div class="container">
+          <!-- LOGO -->
           <a class="navbar-logo fw-bold" href="#">
             <img
               src="images/logo-small.png"
@@ -46,32 +47,42 @@
             />
           </a>
 
+          <!-- TOGGLER -->
           <button
-            class="navbar-toggler"
+            class="navbar-toggler collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#heroNavbar"
+            aria-expanded="false"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="toggler-icon"></span>
           </button>
 
+          <!-- NAV MENU -->
           <div
             class="collapse navbar-collapse justify-content-end"
             id="heroNavbar"
           >
             <ul class="navbar-nav gap-3">
+              <!-- HOME -->
               <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
               </li>
 
-              <!-- MEGA MENU -->
+              <!-- ABOUT US (MEGA MENU) -->
               <li class="nav-item mega-item">
-                <a class="nav-link" href="#">About Us</a>
+                <div
+                  class="nav-link d-flex justify-content-between align-items-center"
+                >
+                  <span>About Us</span>
+                  <button class="submenu-toggle d-lg-none" type="button">
+                    +
+                  </button>
+                </div>
 
                 <div class="mega-menu">
                   <div class="container">
                     <div class="row g-4">
-                      <!-- LEFT INFO -->
                       <div class="col-lg-5">
                         <h5>About Our Company</h5>
                         <span>
@@ -81,7 +92,6 @@
                         <a href="#" class="mega-link">Learn More →</a>
                       </div>
 
-                      <!-- RIGHT SUBMENU LIST -->
                       <div class="col-lg-7">
                         <div class="row">
                           <div class="col-md-6">
@@ -91,7 +101,6 @@
                               <li><a href="#">Key Resource Personnel</a></li>
                             </ul>
                           </div>
-
                           <div class="col-md-6">
                             <ul class="mega-list">
                               <li><a href="#">Board of Directors</a></li>
@@ -108,13 +117,20 @@
                 </div>
               </li>
 
+              <!-- PROJECTS (MEGA MENU) -->
               <li class="nav-item mega-item">
-                <a class="nav-link" href="#">Projects</a>
+                <div
+                  class="nav-link d-flex justify-content-between align-items-center"
+                >
+                  <span>Projects</span>
+                  <button class="submenu-toggle d-lg-none" type="button">
+                    +
+                  </button>
+                </div>
 
                 <div class="mega-menu">
                   <div class="container">
                     <div class="row g-4">
-                      <!-- LEFT INFO -->
                       <div class="col-lg-5">
                         <h5>Our Expertise</h5>
                         <span>
@@ -124,7 +140,6 @@
                         <a href="#" class="mega-link">View All Projects →</a>
                       </div>
 
-                      <!-- RIGHT SUBMENU -->
                       <div class="col-lg-7">
                         <ul class="mega-list two-column">
                           <li><a href="#">Building & Architecture</a></li>
@@ -140,10 +155,12 @@
                 </div>
               </li>
 
+              <!-- NEWS -->
               <li class="nav-item">
                 <a class="nav-link" href="#">News & Events</a>
               </li>
 
+              <!-- CONTACT -->
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
