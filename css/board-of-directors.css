@@ -1,0 +1,49 @@
+.board-section {
+  background-color: #f8f9fa;
+}
+.board-card {
+  max-width: 320px; /* was default auto */
+  margin: 0 auto; /* centers card in column */
+}
+
+.board-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #c62828;
+}
+
+.board-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.board-card:hover {
+  transform: translateY(-6px);
+}
+
+.board-text {
+  padding: 16px;
+  background: #2f3a40;
+  color: #ffffff;
+}
+
+.board-text h5 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.board-text span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.board-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: top center;
+}

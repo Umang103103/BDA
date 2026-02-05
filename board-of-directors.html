@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Design Authority</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--Swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/board-of-directors.css" />
+  </head>
+
+  <body>
+    <!--Navbar & HERO SECTION -->
+    <section class="hero-section position-relative">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark hero-navbar">
+        <div class="container">
+          <!-- LOGO -->
+          <a class="navbar-logo fw-bold" href="#">
+            <img
+              src="images/logo-small.png"
+              class="navbar-logo-img"
+              alt="Logo"
+            />
+          </a>
+
+          <!-- TOGGLER -->
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#heroNavbar"
+            aria-expanded="false"
+          >
+            <span class="toggler-icon"></span>
+          </button>
+
+          <!-- NAV MENU -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="heroNavbar"
+          >
+            <ul class="navbar-nav gap-3">
+              <!-- HOME -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+
+              <!-- ABOUT US (MEGA MENU) -->
+              <li class="nav-item mega-item">
+                <div
+                  class="nav-link d-flex justify-content-between align-items-center"
+                >
+                  <span>About Us</span>
+                  <button class="submenu-toggle d-lg-none" type="button">
+                    +
+                  </button>
+                </div>
+
+                <div class="mega-menu">
+                  <div class="container">
+                    <div class="row g-4">
+                      <div class="col-lg-5">
+                        <h5>About Our Company</h5>
+                        <span>
+                          Building trust through engineering excellence and
+                          sustainable development.
+                        </span>
+                        <a href="#" class="mega-link">Learn More →</a>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <ul class="mega-list">
+                              <li><a href="#">Overview</a></li>
+                              <li><a href="#">Mission & Vision</a></li>
+                              <li><a href="#">Key Resource Personnel</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <ul class="mega-list">
+                              <li><a href="#">Board of Directors</a></li>
+                              <li><a href="#">Organization Setup</a></li>
+                              <li>
+                                <a href="#">Credentials / Appreciations</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PROJECTS (MEGA MENU) -->
+              <li class="nav-item mega-item">
+                <div
+                  class="nav-link d-flex justify-content-between align-items-center"
+                >
+                  <span>Projects</span>
+                  <button class="submenu-toggle d-lg-none" type="button">
+                    +
+                  </button>
+                </div>
+
+                <div class="mega-menu">
+                  <div class="container">
+                    <div class="row g-4">
+                      <div class="col-lg-5">
+                        <h5>Our Expertise</h5>
+                        <span>
+                          Delivering large-scale infrastructure projects with
+                          precision and quality.
+                        </span>
+                        <a href="#" class="mega-link">View All Projects →</a>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <ul class="mega-list two-column">
+                          <li><a href="#">Building & Architecture</a></li>
+                          <li><a href="#">Water Supply & Sanitation</a></li>
+                          <li><a href="#">Drainage & Sewerage</a></li>
+                          <li><a href="#">Social & Environmental</a></li>
+                          <li><a href="#">Road Projects</a></li>
+                          <li><a href="#">Other Engineering Projects</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- NEWS -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">News & Events</a>
+              </li>
+
+              <!-- CONTACT -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- CAROUSEL -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+          ></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/slide1.jpg" class="carousel-img" alt="Slide 1" />
+            <div class="carousel-caption text-center">
+              <h1>We Live for a Challenge</h1>
+              <span>
+                Delivering projects that make a lasting, meaningful difference.
+              </span>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/slide2.jpg" class="carousel-img" alt="Slide 2" />
+            <div class="carousel-caption text-center">
+              <h1>Engineering the Future</h1>
+              <span>Innovative solutions for complex challenges.</span>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/slide3.jpg" class="carousel-img" alt="Slide 3" />
+            <div class="carousel-caption text-center">
+              <h1>Engineering the Future</h1>
+              <span>Innovative solutions for complex challenges.</span>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/slide4.jpg" class="carousel-img" alt="Slide 4" />
+            <div class="carousel-caption text-center">
+              <h1>Engineering the Future</h1>
+              <span>Innovative solutions for complex challenges.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!--Board of directors-->
+    <section class="board-section py-5">
+      <div class="container">
+        <h2 class="board-title mb-5">Board of Directors</h2>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="board-card text-center">
+              <img
+                src="./images/director1.jpg"
+                alt="Er. Arun Singh"
+                class="img-fluid"
+              />
+              <div class="board-text">
+                <h5>Er. Arun Singh</h5>
+                <span>Chairman</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="board-card text-center">
+              <img
+                src="./images/director2.jpg"
+                alt="Er. Khem N. Dallakoti"
+                class="img-fluid"
+              />
+              <div class="board-text">
+                <h5>Er. Khem N. Dallakoti</h5>
+                <span>Managing Director</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="board-card text-center">
+              <img
+                src="./images/director3.jpg"
+                alt="Er. Sudip Paudel"
+                class="img-fluid"
+              />
+              <div class="board-text">
+                <h5>Er. Sudip Paudel</h5>
+                <span>Executive Director</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="board-card text-center">
+              <img
+                src="./images/director4.jpg"
+                alt="Mr. Dwarika Nath Shrestha"
+                class="img-fluid"
+              />
+              <div class="board-text">
+                <h5>Mr. Dwarika Nath Shrestha</h5>
+                <span>Director</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-container">
+          <!-- Company -->
+          <div class="footer-col">
+            <div class="footer-title">Company</div>
+            <a href="#">Overview</a>
+            <a href="#">Services</a>
+            <a href="#">Check Mail</a>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-col">
+            <div class="footer-title">Support</div>
+            <a href="#">FAQ</a>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+            <div class="footer-title">Our Contact</div>
+            <div class="footer-text">
+              <span class="label">Address</span> : Osho Bhawan, Kamaladi,<br />
+              Kathmandu, Nepal
+            </div>
+            <div class="footer-text">
+              <span class="label">Phone</span> : +977-01-5348200,<br />
+              +977-01-5347939
+            </div>
+            <div class="footer-text">
+              <span class="label">Email</span> : bdapvtltd@gmail.com
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="footer-col">
+            <div class="footer-title">Connect</div>
+            <div class="social-links">
+              <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="gp"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="in"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        Copyright © Building Design Authority (P) Ltd., All Rights Reserved:
+        2018
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
