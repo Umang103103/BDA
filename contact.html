@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Design Authority</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--Swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+
+  <body>
+    <!--Navbar & HERO SECTION -->
+    <section class="hero-section position-relative">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark hero-navbar">
+        <div class="container">
+          <!-- LOGO -->
+          <a class="navbar-logo fw-bold" href="#">
+            <img
+              src="images/logo-small.png"
+              class="navbar-logo-img"
+              alt="Logo"
+            />
+          </a>
+
+          <!-- TOGGLER -->
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#heroNavbar"
+            aria-expanded="false"
+          >
+            <span class="toggler-icon"></span>
+          </button>
+
+          <!-- NAV MENU -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="heroNavbar"
+          >
+            <ul class="navbar-nav gap-3">
+              <!-- HOME -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+
+              <!-- ABOUT US (MEGA MENU) -->
+              <li class="nav-item mega-item">
+                <div
+                  class="nav-link d-flex justify-content-between align-items-center"
+                >
+                  <span>About Us</span>
+                  <button class="submenu-toggle d-lg-none" type="button">
+                    +
+                  </button>
+                </div>
+
+                <div class="mega-menu">
+                  <div class="container">
+                    <div class="row g-4">
+                      <div class="col-lg-5">
+                        <h5>About Our Company</h5>
+                        <span>
+                          Building trust through engineering excellence and
+                          sustainable development.
+                        </span>
+                        <a href="#" class="mega-link">Learn More →</a>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <ul class="mega-list">
+                              <li><a href="#">Overview</a></li>
+                              <li><a href="#">Mission & Vision</a></li>
+                              <li><a href="#">Key Resource Personnel</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <ul class="mega-list">
+                              <li><a href="#">Board of Directors</a></li>
+                              <li><a href="#">Organization Setup</a></li>
+                              <li>
+                                <a href="#">Credentials / Appreciations</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PROJECTS (MEGA MENU) -->
+              <li class="nav-item mega-item">
+                <div
+                  class="nav-link d-flex justify-content-between align-items-center"
+                >
+                  <span>Projects</span>
+                  <button class="submenu-toggle d-lg-none" type="button">
+                    +
+                  </button>
+                </div>
+
+                <div class="mega-menu">
+                  <div class="container">
+                    <div class="row g-4">
+                      <div class="col-lg-5">
+                        <h5>Our Expertise</h5>
+                        <span>
+                          Delivering large-scale infrastructure projects with
+                          precision and quality.
+                        </span>
+                        <a href="#" class="mega-link">View All Projects →</a>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <ul class="mega-list two-column">
+                          <li><a href="#">Building & Architecture</a></li>
+                          <li><a href="#">Water Supply & Sanitation</a></li>
+                          <li><a href="#">Drainage & Sewerage</a></li>
+                          <li><a href="#">Social & Environmental</a></li>
+                          <li><a href="#">Road Projects</a></li>
+                          <li><a href="#">Other Engineering Projects</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- NEWS -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">News & Events</a>
+              </li>
+
+              <!-- CONTACT -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- CAROUSEL -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+          ></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/slide1.jpg" class="carousel-img" alt="Slide 1" />
+            <div class="carousel-caption text-center">
+              <h1>We Live for a Challenge</h1>
+              <span>
+                Delivering projects that make a lasting, meaningful difference.
+              </span>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/slide2.jpg" class="carousel-img" alt="Slide 2" />
+            <div class="carousel-caption text-center">
+              <h1>Engineering the Future</h1>
+              <span>Innovative solutions for complex challenges.</span>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/slide3.jpg" class="carousel-img" alt="Slide 3" />
+            <div class="carousel-caption text-center">
+              <h1>Engineering the Future</h1>
+              <span>Innovative solutions for complex challenges.</span>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/slide4.jpg" class="carousel-img" alt="Slide 4" />
+            <div class="carousel-caption text-center">
+              <h1>Engineering the Future</h1>
+              <span>Innovative solutions for complex challenges.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+    <!--Contact header Section-->
+    <section class="contact-hero py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            <h1 class="contact-hero__title mb-3">Have Any Questions?</h1>
+            <p class="contact-hero__subtitle mb-0">
+              Fill out the contact form below, and our team will get back to you
+              shortly to help make your travel plans seamless!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Left-Column of Contact-->
+    <section id="Contact-section" class="containern">
+      <div class="container">
+        <div class="row justify-content-center g-5 gx-lg-5">
+          <div class="col-12 col-lg-5 custom-form">
+            <!-- Information Request Form -->
+            <div class="info-request card mb-4 shadow-sm border-0">
+              <div class="card-body">
+                <form id="infoRequestForm">
+                  <!-- Full Name -->
+                  <div class="mb-3 form-floating-wrap">
+                    <input
+                      id="ir_name"
+                      name="name"
+                      type="text"
+                      class="form-control styled-floating"
+                      placeholder=" "
+                      autocomplete="name"
+                      required
+                    />
+                    <label for="ir_name" class="floating-label">
+                      Name <span class="text-danger">*</span></label
+                    >
+                  </div>
+
+                  <!-- Surname -->
+                  <div class="mb-3 form-floating-wrap">
+                    <input
+                      id="ir_surname"
+                      name="surname"
+                      type="text"
+                      class="form-control styled-floating"
+                      placeholder=" "
+                      autocomplete="family-name"
+                      required
+                    />
+                    <label for="ir_surname" class="floating-label"
+                      >Surname <span class="text-danger">*</span></label
+                    >
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3 form-floating-wrap">
+                    <input
+                      id="ir_email"
+                      name="email"
+                      type="email"
+                      class="form-control styled-floating"
+                      placeholder=" "
+                      autocomplete="email"
+                      required
+                    />
+                    <label for="ir_email" class="floating-label"
+                      >Email Address <span class="text-danger">*</span></label
+                    >
+                  </div>
+
+                  <!-- Mobile Phone -->
+                  <div class="mb-3 form-floating-wrap">
+                    <input
+                      id="ir_phone"
+                      name="phone"
+                      type="tel"
+                      class="form-control styled-floating"
+                      placeholder=" "
+                      autocomplete="tel"
+                      required
+                    />
+                    <label for="ir_phone" class="floating-label"
+                      >Mobile phone <span class="text-danger">*</span></label
+                    >
+                  </div>
+
+                  <!-- Message -->
+                  <div class="mb-3 form-floating-wrap textarea-wrap">
+                    <textarea
+                      id="ir_message"
+                      name="message"
+                      class="form-control styled-floating"
+                      placeholder=" "
+                      rows="5"
+                      required
+                    ></textarea>
+                    <label for="ir_message" class="floating-label"
+                      >Your Message <span class="text-danger">*</span></label
+                    >
+                  </div>
+
+                  <!-- Privacy Checkbox -->
+                  <div class="form-check mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="privacyCheck"
+                      required
+                    />
+                    <label
+                      for="privacyCheck"
+                      class="form-check-label small-muted"
+                    >
+                      I have read the
+                      <a href="#" class="privacy-link">privacy policy</a> and
+                      consent to the processing of my personal data
+                      <span class="text-danger">*</span>
+                    </label>
+                  </div>
+
+                  <!-- Submit button -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-send">
+                      Send Request
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="col-12 col-lg-4">
+            <div class="custom-content card mb-4 shadow-sm border-0">
+              <!-- Bootstrap Icons CDN (remove if already included) -->
+
+              <div class="contact-stack mt-3 mb-4">
+                <!-- Office Location (Nepal) -->
+                <div class="contact-block">
+                  <div class="cb-head d-flex align-items-start gap-3">
+                    <div class="cb-icon">
+                      <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <h5 class="cb-title">Office Location</h5>
+                      <div class="cb-sub">Nepal</div>
+                      <div class="cb-small">Osho Bhawan, Kathmandu</div>
+                    </div>
+                  </div>
+                  <div class="cb-divider"></div>
+                </div>
+
+                <!-- Send An Email -->
+                <div class="contact-block">
+                  <div class="cb-head d-flex align-items-start gap-3">
+                    <div class="cb-icon">
+                      <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <h5 class="cb-title">Send An Email</h5>
+                      <div class="cb-sub">Send us email at</div>
+                      <a
+                        class="cb-link"
+                        href="mailto:info@himalayanibexadventure.com"
+                        >info@himalayanibexadventure.com</a
+                      >
+                    </div>
+                  </div>
+                  <div class="cb-divider"></div>
+                </div>
+
+                <!-- Phone (Nepal) -->
+                <div class="contact-block">
+                  <div class="cb-head d-flex align-items-start gap-3">
+                    <div class="cb-icon">
+                      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <h5 class="cb-title">Have Any Questions?</h5>
+                      <div class="cb-sub">Phone:</div>
+                      <a class="cb-link" href="tel:+9779841000919"
+                        >+977 9841000919</a
+                      >
+                    </div>
+                  </div>
+                  <div class="cb-divider"></div>
+                </div>
+
+                <!-- Office Location (UK) -->
+                <div class="contact-block">
+                  <div class="cb-head d-flex align-items-start gap-3">
+                    <div class="cb-icon">
+                      <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <h5 class="cb-title">Office Location</h5>
+                      <div class="cb-sub">UK</div>
+                      <div class="cb-small">
+                        6H Greensfield Court, Alnwick, Northumberland, NE66 2DE,
+                        UK
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cb-divider"></div>
+                </div>
+
+                <!-- Phone (UK) -->
+                <div class="contact-block">
+                  <div class="cb-head d-flex align-items-start gap-3">
+                    <div class="cb-icon">
+                      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <h5 class="cb-title">Have Any Questions?</h5>
+                      <div class="cb-sub">Phone:</div>
+                      <a class="cb-link" href="tel:+447912260635"
+                        >+44 (0) 7912 260635</a
+                      >
+                    </div>
+                  </div>
+                  <div class="cb-divider"></div>
+                </div>
+
+                <!-- Hours of Operation -->
+                <div class="contact-block">
+                  <div class="cb-head d-flex align-items-start gap-3">
+                    <div class="cb-icon">
+                      <i class="bi bi-clock-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <h5 class="cb-title">Hours of Operation</h5>
+                      <div class="cb-small">
+                        Monday – Friday: 9:00 AM – 6:00 PM
+                      </div>
+                      <div class="cb-small">Saturday: 10:00 AM – 4:00 PM</div>
+                      <div class="cb-small">Sunday: Closed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Full-width map section -->
+    <section class="map-fullwidth-section mb-5">
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3058103989697!2d85.31531821444419!3d27.70784273207838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1900ddf7863f%3A0x17ffc9eefdb44d97!2sOsho+Bhawan!5e0!3m2!1sen!2snp!4v1525854670364"
+          aria-label="Himalayan Ibex Adventure location map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+
+        <!-- overlay bar -->
+        <div
+          class="map-overlay d-flex align-items-center justify-content-between"
+        >
+          <!-- LEFT: Your location format -->
+          <div class="map-label d-flex align-items-center">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            <p class="mb-0">Osho Bhawan, Kathmandu</p>
+          </div>
+
+          <!-- RIGHT: Your Get Directions link -->
+          <a
+            href="https://maps.google.com/maps/dir//Osho+Bhawan+P859%2B42J+Kathmandu+44605/@27.707838,85.3175069,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x39eb1900ddf7863f:0x17ffc9eefdb44d97"
+            target="_blank"
+            class="btn btn-primary btn-get-directions"
+          >
+            <i class="fas fa-directions"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-container">
+          <!-- Company -->
+          <div class="footer-col">
+            <div class="footer-title">Company</div>
+            <a href="#">Overview</a>
+            <a href="#">Services</a>
+            <a href="#">Check Mail</a>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-col">
+            <div class="footer-title">Support</div>
+            <a href="#">FAQ</a>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+            <div class="footer-title">Our Contact</div>
+            <div class="footer-text">
+              <span class="label">Address</span> : Osho Bhawan, Kamaladi,<br />
+              Kathmandu, Nepal
+            </div>
+            <div class="footer-text">
+              <span class="label">Phone</span> : +977-01-5348200,<br />
+              +977-01-5347939
+            </div>
+            <div class="footer-text">
+              <span class="label">Email</span> : bdapvtltd@gmail.com
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="footer-col">
+            <div class="footer-title">Connect</div>
+            <div class="social-links">
+              <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="gp"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="in"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        Copyright © Building Design Authority (P) Ltd., All Rights Reserved:
+        2018
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
